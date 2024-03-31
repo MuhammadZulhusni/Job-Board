@@ -1,16 +1,16 @@
-# Book Reviews
+# Job Board
 
 ## Installation
 
-Please check the official laravel installation guide for server requirements before you start. [Official Documentation](https://laravel.com/docs/5.4/installation#installation)
+Please check the official Laravel installation guide for server requirements before you start. [Official Documentation](https://laravel.com/docs/5.4/installation#installation)
 
 Clone the repository
 
-    git clone git@github.com:zulhusni2003/Book-Reviews.git
+    git clone git@github.com:zulhusni2003/Job-Board.git
 
 Switch to the repo folder
 
-    cd Book-Reviews
+    cd Job-Board
 
 Install all the dependencies using composer
 
@@ -32,12 +32,16 @@ Start the local development server
 
     php artisan serve
 
+Compile front-end assets using npm
+
+    npm install && npm run dev
+
 You can now access the server at http://localhost:8000
 
 **TL;DR command list**
 
-    git clone git@github.com:zulhusni2003/Book-Reviews.git
-    cd Book-Reviews
+    git clone git@github.com:zulhusni2003/Job-Board.git
+    cd Job-Board
     composer install
     cp .env.example .env
     php artisan key:generate
@@ -66,8 +70,8 @@ Run the database seeder and you're done
 To install with [Docker](https://www.docker.com), run following commands:
 
 ```
-git clone git@github.com:zulhusni2003/Book-Reviews.git
-cd Book-Reviews
+git clone git@github.com:zulhusni2003/Job-Board.git
+cd Job-Board
 cp .env.example.docker .env
 docker run -v $(pwd):/app composer install
 cd ./docker
@@ -82,3 +86,8 @@ docker-compose exec php php artisan serve --host=0.0.0.0
 ## Usage
 
 Once the installation is complete, you can use the book reviews application.
+
+## Tailwind CSS
+
+Feel free to adjust the content further if needed! Let me know if you need any more modifications.
+
