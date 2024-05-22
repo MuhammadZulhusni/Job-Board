@@ -2,8 +2,6 @@
 
 ## Installation
 
-Please check the official Laravel installation guide for server requirements before you start. [Official Documentation](https://laravel.com/docs/5.4/installation#installation)
-
 Clone the repository
 
     git clone git@github.com:zulhusni2003/Job-Board.git
