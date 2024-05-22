@@ -37,14 +37,6 @@ Compile front-end assets using npm
     npm install && npm run dev
 
 You can now access the server at http://localhost:8000
-
-**TL;DR command list**
-
-    git clone git@github.com:zulhusni2003/Job-Board.git
-    cd Job-Board
-    composer install
-    cp .env.example .env
-    php artisan key:generate
     
 **Make sure you set the correct database connection information before running the migrations** [Environment variables](#environment-variables)
 
@@ -65,24 +57,6 @@ Run the database seeder and you're done
 
     php artisan migrate:refresh
     
-## Docker
-
-To install with [Docker](https://www.docker.com), run following commands:
-
-```
-git clone git@github.com:zulhusni2003/Job-Board.git
-cd Job-Board
-cp .env.example.docker .env
-docker run -v $(pwd):/app composer install
-cd ./docker
-docker-compose up -d
-docker-compose exec php php artisan key:generate
-docker-compose exec php php artisan jwt:generate
-docker-compose exec php php artisan migrate
-docker-compose exec php php artisan db:seed
-docker-compose exec php php artisan serve --host=0.0.0.0
-```
-
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
