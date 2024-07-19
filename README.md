@@ -4,7 +4,7 @@
 
 Clone the repository
 
-    git clone git@github.com:zulhusni2003/Job-Board.git
+    git clone https://github.com/MuhammadZulhusni/Job-Board.git
 
 Switch to the repo folder
 
