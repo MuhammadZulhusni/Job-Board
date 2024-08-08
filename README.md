@@ -1,69 +1,99 @@
 # Job Board
 
+**Job Board** is a web application built with the Laravel framework that streamlines the job search process. Employers can create and manage job listings, while job seekers can easily search for opportunities and submit their applications.
+
 ## Installation
 
-Clone the repository
+Follow these steps to set up the project locally:
 
+1. **Clone the Repository:**
+
+    ```bash
     git clone https://github.com/MuhammadZulhusni/Job-Board.git
+    ```
 
-Switch to the repo folder
+2. **Navigate to the Project Folder:**
 
+    ```bash
     cd Job-Board
+    ```
 
-Install all the dependencies using composer
+3. **Install Dependencies:**
 
+    Use Composer to install all required dependencies:
+
+    ```bash
     composer install
+    ```
 
-Copy the example env file and make the required configuration changes in the .env file
+4. **Set Up Environment Variables:**
 
+    Copy the example environment file and update it with your specific configuration:
+
+    ```bash
     cp .env.example .env
+    ```
 
-Generate a new application key
+    Ensure that your `.env` file contains the correct database connection information:
 
+    ```env
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=your_database_name
+    DB_USERNAME=your_database_username
+    DB_PASSWORD=your_database_password
+    ```
+
+5. **Generate Application Key:**
+
+    ```bash
     php artisan key:generate
+    ```
 
-Run the database migrations (**Set the database connection in .env before migrating**)
+6. **Run Database Migrations:**
 
+    Make sure your database connection is correctly set in the `.env` file, then run the migrations:
+
+    ```bash
     php artisan migrate
+    ```
 
-Start the local development server
+7. **Start the Development Server:**
 
+    ```bash
     php artisan serve
+    ```
 
-Compile front-end assets using npm
+8. **Compile Front-End Assets:**
 
+    Install and compile the necessary front-end assets using npm:
+
+    ```bash
     npm install && npm run dev
+    ```
 
-You can now access the server at http://localhost:8000
-    
-**Make sure you set the correct database connection information before running the migrations** [Environment variables](#environment-variables)
+    You can now access the application at [http://localhost:8000](http://localhost:8000).
 
-    php artisan migrate
-    php artisan serve
+## Database Seeding
 
-## Database seeding
+To refresh the database and seed it with dummy data:
 
-Open the DummyDataSeeder and set the property values as per your requirement
+1. Run the following command:
 
-    database/seeds/DummyDataSeeder.php
+    ```bash
+    php artisan migrate:fresh --seed
+    ```
 
-Run the database seeder and you're done
+    **Note:** This command will drop all tables, run the migrations, and then seed the database with the dummy data.
 
-    php artisan db:seed
-
-***Note*** : It's recommended to have a clean database before seeding. You can refresh your migrations at any point to clean the database by running the following command
-
-    php artisan migrate:refresh
-    
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
+Contributions are welcome! If you'd like to contribute:
 
 1. Fork the repository.
-2. Create a new branch for your feature (`git checkout -b feature/YourFeatureName`).
+2. Create a new branch (`git checkout -b feature/YourFeatureName`).
 3. Make your changes.
 4. Commit your changes (`git commit -am 'Add some feature'`).
-5. Push to the branch (`git push origin feature/YourFeatureName`).
-6. Create a new Pull Request.
-
-
+5. Push to your branch (`git push origin feature/YourFeatureName`).
+6. Submit a Pull Request.
